@@ -1,0 +1,71 @@
+.profile {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 10vh;
+  background-color: $color-white-dark;
+  @include align-items-center-column;
+
+  &__person-details {
+    width: 70%;
+    padding: 0.5rem 1rem;
+    @include horizontally-center;
+    justify-content: space-around;
+    margin: 0.8rem 0rem;
+    border-bottom: 1px solid $color-grey;
+
+    &__user-info {
+      width: 40%;
+      margin-top: -3rem;
+
+      h4 {
+        font-size: $font-size-large;
+      }
+    }
+
+    &__user-statistics {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      h5 {
+        font-weight: 300;
+        font-size: $font-size-small;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    img {
+      height: 12rem;
+      width: 12rem;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__user-posts {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 22%;
+      margin: 0.8rem;
+      border-radius: 3px;
+    }
+  }
+}
+
+.profile-pic-container {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.file-upload {
+  margin-top: -0.5rem !important;
+}

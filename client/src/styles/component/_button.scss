@@ -1,0 +1,84 @@
+.btn {
+  height: 2.5rem;
+  padding: 0.4rem;
+  border: 1px solid $color-grey;
+  border-radius: 3px;
+  font-family: "Lato", sans-serif;
+  color: $color-white;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: $color-blue-light;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(#000, 0.3);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(#000, 0.3);
+  }
+}
+
+.btn-size-medium {
+  width: 6rem;
+  text-align: center;
+}
+
+.logout-btn {
+  width: 5rem;
+  height: 2.2rem;
+  background-color: $color-blue-light;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    transform: translateY(0);
+    box-shadow: 0 0 0;
+    background-color: $color-blue-light-4;
+  }
+}
+
+.btn-comment {
+  width: 20%;
+  border: none;
+  color: $color-blue-light-4;
+  font-family: "Lato", sans-serif;
+  padding: 1.2rem 0;
+  border-end-end-radius: 3px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-blue-light-4;
+  }
+}
+
+.follow {
+  margin-top: 1rem;
+  width: 4.5rem;
+  text-align: center;
+
+  &:hover,
+  &:active,
+  &:focus {
+    transform: translateY(0);
+    box-shadow: 0 0 0;
+  }
+}

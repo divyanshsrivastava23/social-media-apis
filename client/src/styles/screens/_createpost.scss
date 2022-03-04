@@ -1,0 +1,72 @@
+.create-post {
+  @include initial-style;
+  height: 90vh;
+  @include vertically-center;
+
+  &__main {
+    width: 50%;
+    background-color: $color-white;
+    padding: 2rem;
+    border: $grey-border;
+    text-align: center;
+
+    input[type="text"] {
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: $grey-border;
+      padding: 0.8rem 0.8rem 0.3rem 0.8rem;
+      outline: none;
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+      font-size: 1.1rem;
+      color: $color-black-dark;
+
+      &:not(:first-child) {
+        margin-top: 0.5rem;
+      }
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid $color-grey;
+      }
+    }
+
+    &__file-upload {
+      margin-top: 2rem;
+      display: flex;
+    }
+
+    button {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.upload-box {
+  font-size: $font-size-small;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  background-color: white;
+  width: 100%;
+  border-bottom: $grey-border;
+  cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+  padding: 0.8rem;
+  margin-right: 2rem;
+  background-color: $color-blue-light-4;
+  color: $color-white;
+  border: none;
+  border-radius: 3px;
+  font-size: $font-size-small;
+  outline: none;
+  cursor: pointer;
+}
+
+::-webkit-file-upload-button:hover {
+  background-color: $color-blue-light;
+}

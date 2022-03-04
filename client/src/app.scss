@@ -1,0 +1,21 @@
+//* Fonts:
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+// * abstract:
+@import "./styles/abstract/variables";
+@import "./styles/abstract/mixins";
+
+// * Base:
+@import "./styles/base/base";
+
+// * Components:
+@import "./styles/component/nav";
+@import "./styles/component/button";
+
+// */screens:
+@import "./styles/screens/signup";
+@import "./styles/screens/signin";
+@import "./styles/screens/profile";
+@import "./styles/screens/home";
+@import "./styles/screens/createpost";

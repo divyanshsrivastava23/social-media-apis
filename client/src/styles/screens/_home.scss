@@ -1,0 +1,161 @@
+.home {
+  width: 100%;
+  margin-top: 10vh;
+  min-height: 90vh;
+  color: $color-black-darker;
+  padding: 0.5rem 1rem 2.5rem 1rem;
+  background-color: $color-white-dark;
+  @include align-items-center-column;
+
+  &__card {
+    width: 30%;
+    margin-top: 3rem;
+    background-color: $color-white;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+
+    &__header {
+      padding: 0.5rem;
+      width: 100%;
+      @include horizontally-center;
+      justify-content: space-between;
+      border-bottom: $grey-border;
+
+      img {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.25);
+        object-fit: cover;
+      }
+
+      h5 {
+        padding: 0.5rem;
+        padding-right: 2.5rem;
+        font-size: $font-size-small;
+      }
+      &__profile-link {
+        color: $color-black-dark;
+      }
+    }
+
+    &__img-container {
+      text-align: center;
+
+      img {
+        height: 16rem;
+        width: 100%;
+        object-fit: cover;
+        border-bottom: $grey-border;
+      }
+    }
+
+    &__card-content {
+      padding: 0.5rem 0 0 0;
+
+      &__title-body {
+        padding: 0.5rem 1rem;
+        color: $color-black-dark;
+        border-bottom: $grey-border;
+
+        p {
+          margin-top: 0.1rem;
+        }
+      }
+
+      &__icon-container {
+        padding: 1rem 0.8rem;
+        border-bottom: $grey-border;
+        position: relative;
+      }
+    }
+  }
+}
+
+.icons {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.icon-heart {
+  margin-right: 1rem;
+}
+
+.red-heart {
+  color: red;
+}
+
+.icon-delete {
+  position: absolute;
+  right: 1rem;
+}
+
+.icon-delete-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.likes-container {
+  padding: 0.8rem;
+}
+
+.likes {
+  font-weight: 300;
+}
+
+.commentsContainer {
+  width: 40%;
+  margin: 3rem 0 0 0;
+  background-color: $color-white;
+  position: relative;
+  overflow-y: scroll;
+
+  &__comments {
+    display: flex;
+    align-items: center;
+  }
+
+  &__comment {
+    margin: 0.5rem;
+    width: 80%;
+  }
+
+  &__delete {
+    width: 10%;
+    @include vertically-center;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__delete--show {
+    visibility: visible;
+    color: $color-grey-dark;
+  }
+  &__delete--show:hover {
+    cursor: pointer;
+    color: $color-black-dark;
+  }
+
+  &__comment-box {
+    @include horizontally-center;
+    justify-content: space-around;
+    background-color: $color-white-dark;
+    border-top: $grey-border;
+    width: 28%;
+    z-index: 20;
+    position: fixed;
+    top: 76%;
+
+    input {
+      border: none;
+      padding: 1.2rem 0 1.2rem 1rem;
+      font-size: 0.8rem;
+      width: 80%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

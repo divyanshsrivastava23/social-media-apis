@@ -1,0 +1,46 @@
+@mixin vertically-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin horizontally-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin initial-style {
+  background-color: $color-white-dark;
+  width: 100%;
+  margin-top: 10vh;
+  padding: 2rem;
+}
+
+//  * profile component specific
+@mixin align-items-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//* Media Query:
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == 950px {
+    @media only screen and (max-width: 950px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 720px {
+    @media only screen and (max-width: 700px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 550px {
+    @media only screen and (max-width: 550px) {
+      @content;
+    }
+  }
+}

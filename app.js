@@ -7,8 +7,8 @@ const authRoute = require("./routes/auth.js"); //? authentication route
 const postRoute = require("./routes/post.js");
 const userRoute = require("./routes/user.js");
 
-const { MONGOURI } = require("./keys"); //? Mongo URL
-const PORT = 5000;
+const { MONGOURI } = require("./config/keys"); //? Mongo URL
+const PORT = process.env.PORT || 5000;
 
 // * connecting with mongoDB
 mongoose.connect(MONGOURI, {
@@ -28,6 +28,14 @@ app.use(express.json()); // ? this is basically parses the request with json pay
 app.use(authRoute);
 app.use(postRoute);
 app.use(userRoute);
+
+if (process.env.NODE_ENV == "production") {
+  app.use(express.static("client/build"));
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 // * starting the app
 app.listen(PORT, () => {

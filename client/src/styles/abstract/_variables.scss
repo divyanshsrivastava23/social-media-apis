@@ -1,0 +1,25 @@
+// * colors
+$color-black-light: #777;
+$color-black-dark: #333;
+$color-black-darker: #000;
+
+$color-grey: rgba(128, 128, 128, 0.3);
+$color-grey-dark: rgba(128, 128, 128, 0.6);
+
+$color-white-dark: rgb(250, 250, 250);
+$color-white: #ffffff;
+$color-white-light: #ccc;
+
+$color-blue-light: #0095f6;
+$color-blue-light-2: #b2dffc;
+$color-blue-light-3: #4f95f6;
+$color-blue-light-4: rgb(78, 78, 214);
+
+// * fonts
+$font-size-small: 1rem;
+$font-size-large: 1.5rem;
+$font-size-larger: 2.5rem;
+
+// * Border
+$grey-border: 1px solid $color-grey;
+$dark-grey-border: 1px solid $color-grey-dark;

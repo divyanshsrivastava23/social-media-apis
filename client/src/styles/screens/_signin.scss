@@ -1,0 +1,77 @@
+.signin {
+  @include initial-style;
+  @include vertically-center;
+  height: 90vh;
+
+  &__card {
+    width: 28%;
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: 3px;
+    border: 1px solid $color-grey;
+    background-color: $color-white;
+    @include vertically-center;
+
+    h1 {
+      font-family: "Grand Hotel", cursive;
+      font-size: $font-size-larger;
+      font-weight: 400;
+    }
+
+    &__form {
+      @include vertically-center;
+      margin-top: 1rem;
+      width: 100%;
+
+      input {
+        border: 1px solid $color-grey;
+        border-radius: 3px;
+        padding: 0.5rem;
+        width: 100%;
+        outline: none;
+      }
+      input:not(:first-child) {
+        margin-top: 1.5rem;
+      }
+      input:focus {
+        border: 1.5px solid $color-grey-dark;
+      }
+    }
+
+    p {
+      width: 80%;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: $color-grey-dark;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  }
+  &__signup-link {
+    @include horizontally-center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    width: 28%;
+    padding: 1rem 0.5rem;
+    border: 1px solid $color-grey;
+
+    p {
+      color: $color-black-dark;
+    }
+  }
+}
+
+.signin-btn {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.signup-link {
+  &,
+  &:link,
+  &:visited,
+  &:active {
+    margin-left: 0.5rem;
+    color: $color-blue-light;
+  }
+}
