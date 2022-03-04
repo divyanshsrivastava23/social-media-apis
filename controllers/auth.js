@@ -9,7 +9,8 @@ const { JWT_SECRET } = require("../keys");
 
 const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
-  service: "hotmail",
+  host: "smtp-mail.outlook.com",
+  port: 587,
   auth: {
     user: "no-reply--1221@outlook.com",
     pass: "QWERTY123!@#",
@@ -63,7 +64,7 @@ const signUp = (req, res) => {
             from: "no-reply--1221@outlook.com",
             to: user.email,
             subject: "Signed up Successfully.",
-            html: `<p> Hello <b>${name}</b> you have successfully signed up for the Picstgram. </p> <h4> <a href="www.picstagram.com">Click here</a> To Login <h4>`,
+            html: `<p> Hello <b>${name}</b> you have successfully signed up for the Clickera. </p> <h4> <a href="www.clickera.com">Click here</a> To Login <h4>`,
           };
           transporter.sendMail(options, (err, info) => {
             if (err) {

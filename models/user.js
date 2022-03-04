@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
   avatar: {
     type: String,
     default:
-      "https://res.cloudinary.com/devyanshsrivastava/image/upload/v1625416003/download_s397c2.png",
+      "https://res.cloudinary.com/devyanshsrivastava/image/upload/v1646128609/empty_z5yygy.jpg",
   },
   resetToken: String,
   expireToken: Date,
