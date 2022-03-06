@@ -5,7 +5,7 @@
 
 <img src="dist/cover.png" alt="cover"/>
 
-<a href="https://clickera.herokuapp.com/">Live demo</a>
+<a href="https://clickera.herokuapp.com/" target="_blank">Live demo</a>
 
 </div>
 
