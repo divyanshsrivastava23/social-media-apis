@@ -1,7 +1,7 @@
 <div align="center">
 <h2> Clickera </h2>
 
-### Social media app a replica of Instagram
+### Social Media App - A replica of Instagram
 
 <img src="dist/cover.png" alt="cover"/>
 
