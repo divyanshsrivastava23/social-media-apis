@@ -64,7 +64,7 @@ const signUp = (req, res) => {
             from: "no-reply--1221@outlook.com",
             to: user.email,
             subject: "Signed up Successfully.",
-            html: `<p> Hello <b>${name}</b> you have successfully signed up for Clickera. </p> <h4> <a href="https://clickera.herokuapp.com/">Click here</a> To Login <h4>`,
+            html: `<p> Hello <b>${name}</b> you have successfully signed up for Clickera. </p> <h4> <a href="http://localhost:3000/">Click here</a> To Login <h4>`,
           };
           transporter.sendMail(options, (err, info) => {
             if (err) {
@@ -147,7 +147,7 @@ const resetPassword = (req, res) => {
           subjet: "Password reset",
           html: `
           <p>A request has been recieved to change the password for your Insta account. </p>
-          <h3> <a href="http://localhost:3002/resetpassword/${token}"> Click here </a> to change the password. </h3>
+          <h3> <a href="http://localhost:3000/resetpassword/${token}"> Click here </a> to change the password. </h3>
           `,
         });
         res.json({ message: "Check your email!" });

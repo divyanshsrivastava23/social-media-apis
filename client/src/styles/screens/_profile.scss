@@ -59,6 +59,10 @@
       border-radius: 3px;
     }
   }
+
+  &__user-posts:last-child {
+    justify-content: start;
+  }
 }
 
 .profile-pic-container {
