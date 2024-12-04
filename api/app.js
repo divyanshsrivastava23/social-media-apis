@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 // *Routes
 const authRoute = require("./routes/auth.js"); //? authentication route
@@ -33,7 +34,9 @@ if (process.env.NODE_ENV == "production") {
   app.use(express.static("client/build"));
   const path = require("path");
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(
+      path.resolve(__dirname, "client", "build", "index.html")
+    );
   });
 }
 
