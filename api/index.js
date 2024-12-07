@@ -8,7 +8,7 @@ const authRoute = require("./routes/auth.js"); //? authentication route
 const postRoute = require("./routes/post.js");
 const userRoute = require("./routes/user.js");
 
-const { MONGOURI } = require("./config/keys"); //? Mongo URL
+const { MONGOURI } = require("./config/keys.js"); //? Mongo URL
 const PORT = process.env.PORT || 5000;
 
 // * connecting with mongoDB
